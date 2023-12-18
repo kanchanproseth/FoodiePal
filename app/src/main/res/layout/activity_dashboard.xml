@@ -9,6 +9,7 @@
     android:orientation="vertical">
 
     <com.google.android.material.tabs.TabLayout
+        android:background="#FF1744"
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -16,7 +17,8 @@
         app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
         app:tabIndicatorHeight="5dp"
         app:tabMode="auto"
-        app:tabTextColor="@color/black">
+        app:tabIndicatorColor="@color/white"
+        app:tabTextColor="@color/white">
     </com.google.android.material.tabs.TabLayout>
 
     <RelativeLayout
@@ -36,6 +38,9 @@
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:background="#FF1744"
         android:id="@+id/bottom_navigation_view"
         android:layout_gravity="end"
         android:layout_width="match_parent"

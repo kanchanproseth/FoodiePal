@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlogDetailsActivity">
+    <ImageButton
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/back_button"
+        android:background="@drawable/login_background_shape"
+        android:layout_centerHorizontal="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:elevation="10dp"
+        android:src="@drawable/baseline_arrow_back_24"/>
+
+    <TextView
+        android:id="@+id/blog_details_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/aladin"
+        android:text="Blog Title Bla Bla"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            android:divider="@android:color/transparent"
+            app:cardElevation="25dp"
+            android:elevation="9dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:adjustViewBounds="true"
+                    android:id="@+id/blog_details_image_view"
+                    android:clipToOutline="true"
+                    android:background="@drawable/blog_image_view_background"
+                    android:layout_margin="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/food"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"/>
+
+                <TextView
+                    android:id="@+id/blog_details_content_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:fontFamily="serif"
+                    android:text="Hello and welcome to your fall life.
+
+I would like to campaign for you to enter into fall soup season with this cozy classic Broccoli Cheese Soup. It is a hug-in-a-bowl that is not only *easy to make* but honestly puts Panera’s version to shame. Ooooh yes, I said it! Listen, I truly love Panera, but side-by-side with this comforting pot of creaminess gently bubbling away on the stove, with the FRESH broccoli and carrots, and the glorious cheddar cheese that you ate straight off the cutting board shredded by hand, there is no comparing.Hello and welcome to your fall life.
+
+I would like to campaign for you to enter into fall soup season with this cozy classic Broccoli Cheese Soup. It is a hug-in-a-bowl that is not only *easy to make* but honestly puts Panera’s version to shame. Ooooh yes, I said it! Listen, I truly love Panera, but side-by-side with this comforting pot of creaminess gently bubbling away on the stove, with the FRESH broccoli and carrots, and the glorious cheddar cheese that you ate straight off the cutting board shredded by hand, there is no comparing.Hello and welcome to your fall life.
+
+I would like to campaign for you to enter into fall soup season with this cozy classic Broccoli Cheese Soup. It is a hug-in-a-bowl that is not only *easy to make* but honestly puts Panera’s version to shame. Ooooh yes, I said it! Listen, I truly love Panera, but side-by-side with this comforting pot of creaminess gently bubbling away on the stove, with the FRESH broccoli and carrots, and the glorious cheddar cheese that you ate straight off the cutting board shredded by hand, there is no comparing.Hello and welcome to your fall life.
+
+I would like to campaign for you to enter into fall soup season with this cozy classic Broccoli Cheese Soup. It is a hug-in-a-bowl that is not only *easy to make* but honestly puts Panera’s version to shame. Ooooh yes, I said it! Listen, I truly love Panera, but side-by-side with this comforting pot of creaminess gently bubbling away on the stove, with the FRESH broccoli and carrots, and the glorious cheddar cheese that you ate straight off the cutting board shredded by hand, there is no comparing."
+                    android:textAlignment="textStart"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

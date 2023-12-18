@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="20dip"
+    android:layout_marginRight="20dip"
+    android:background="@drawable/custom_dialog_shape"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="Blog"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="@string/title"
+            android:textAlignment="textStart"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/blog_title_edt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/custom_edit_text_shape"
+            android:maxLength="40"
+            android:padding="15dp"
+            android:hint="@string/enter_the_title"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="@string/image_url"
+            android:textAlignment="textStart"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/image_url_edt"
+            android:padding="15dp"
+            android:background="@drawable/custom_edit_text_shape"
+            android:maxLines="5"
+            android:inputType="textMultiLine"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="@string/enter_the_image_url"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="@string/content"
+            android:textAlignment="textStart"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/content_edt"
+            android:padding="15dp"
+            android:background="@drawable/custom_edit_text_shape"
+            android:maxLines="5"
+            android:inputType="textMultiLine"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:hint="@string/enter_the_blog_content"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_recipe_dialog_button"
+            android:textAllCaps="false"
+            android:text="Save"
+            app:backgroundTint="#E53935"
+            app:cornerRadius="30dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

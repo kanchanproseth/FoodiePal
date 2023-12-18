@@ -17,4 +17,10 @@
     <string name="enter_ingredients">Enter ingredients</string>
     <string name="enter_instructions">Enter instructions</string>
     <string name="enter_title">Enter title</string>
+    <string name="enter_the_title">Enter the title</string>
+    <string name="title">Title:</string>
+    <string name="image_url">Image url:</string>
+    <string name="enter_the_image_url">Enter the image url</string>
+    <string name="content">Content:</string>
+    <string name="enter_the_blog_content">Enter the blog content</string>
 </resources>
