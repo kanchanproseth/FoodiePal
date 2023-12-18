@@ -35,13 +35,3 @@ Assignment Name: FoodiePal
 ![alt text](https://github.com/kanchanproseth/FoodiePal/blob/main/app/screenshots/phone_permission_check.png?raw=true)
 
 #### About Me Screen (Updating)
-
-
-
-
-
-
-#### Details Screen
-![alt text](https://github.com/kanchanproseth/CartApplication/blob/main/screenshot/details_screen.png?raw=true)
-
-#### On Home it will finish the details screen and go back to Home screen
