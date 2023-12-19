@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,22 +14,23 @@ import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.cs473.mda.foodiepal.R
 import com.cs473.mda.foodiepal.dashboard.adapter.blog.Blog
-import com.cs473.mda.foodiepal.dashboard.adapter.recipe.Recipe
+import com.cs473.mda.foodiepal.dashboard.pages.AboutMeFragment
 import com.cs473.mda.foodiepal.databinding.BlogAddDialogBinding
-import com.cs473.mda.foodiepal.databinding.RecipeAddDialogBinding
+import com.cs473.mda.foodiepal.databinding.EditAboutMeDialogBinding
 
-class AddBlogDialog: DialogFragment(R.layout.blog_add_dialog) {
-    var delegate: AddBlogInterface? = null
+class EditAboutMeDialog(model: AboutMeFragment.Profile): DialogFragment(R.layout.blog_add_dialog) {
+    var delegate: EditAboutMeInterface? = null
 
-    private var _binding: BlogAddDialogBinding? = null
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    val binding get() = _binding!!
+    private val _model = model
+
+    private var _binding: EditAboutMeDialogBinding? = null
+
+    private val binding get() = _binding!!
 
     override fun getTheme() = R.style.RoundedCornersDialog
 
     companion object {
-        const val TAG = "AddBlogDialog"
+        const val TAG = "EditAboutMeDialog"
     }
 
     override fun onCreateView(
@@ -36,13 +38,13 @@ class AddBlogDialog: DialogFragment(R.layout.blog_add_dialog) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = BlogAddDialogBinding.inflate(inflater, container, false)
+        _binding = EditAboutMeDialogBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        _binding = BlogAddDialogBinding.inflate(LayoutInflater.from(context))
+        _binding = EditAboutMeDialogBinding.inflate(LayoutInflater.from(context))
 
         val dialog = activity?.let {
             Dialog(it)
@@ -58,19 +60,18 @@ class AddBlogDialog: DialogFragment(R.layout.blog_add_dialog) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.addRecipeDialogButton.setOnClickListener {
-            val title = binding.blogTitleEdt.text.toString()
-            val imageUrl = binding.imageUrlEdt.text.toString()
-            val content = binding.contentEdt.text.toString()
+        binding.aboutMeSaveButton.setOnClickListener {
+            val profileImageUrl = binding.profileImageUrlEdt.text.toString()
+            val profileSkillText = binding.profileSkilEdt.text.toString()
+            val profileDescription = binding.profileDescriptionEdt.text.toString()
 
-            if (title.isEmpty() ||imageUrl.isEmpty() || content.isEmpty()) {
-                Toast.makeText(context, "Please input all field to save blog", Toast.LENGTH_LONG).show()
+            if (profileImageUrl.isEmpty() ||profileSkillText.isEmpty() || profileDescription.isEmpty()) {
+                Toast.makeText(context, "Please input all field to update profile", Toast.LENGTH_LONG).show()
             } else {
-                delegate?.add(Blog(title, content, imageUrl))
+                delegate?.save(AboutMeFragment.Profile(profileImageUrl, profileSkillText, profileDescription))
                 this.dismiss()
             }
         }
-
     }
 
     override fun onDestroyView() {
