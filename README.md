@@ -35,3 +35,8 @@ Assignment Name: FoodiePal
 ![alt text](https://github.com/kanchanproseth/FoodiePal/blob/main/app/screenshots/phone_permission_check.png?raw=true)
 
 #### About Me Screen (Updating)
+![alt text](https://github.com/kanchanproseth/FoodiePal/blob/main/app/screenshots/about_me.png?raw=true)
+
+#### About Me Screen Edit dialog
+![alt text](https://github.com/kanchanproseth/FoodiePal/blob/main/app/screenshots/about_me_edit.png?raw=true)
+
