@@ -23,4 +23,6 @@
     <string name="enter_the_image_url">Enter the image url</string>
     <string name="content">Content:</string>
     <string name="enter_the_blog_content">Enter the blog content</string>
+    <string name="profile_description_default">👋 Hi, I’m Proseth. I am an iOS Developer. \n🚀 I\'d like to try new things. \n📫 How to reach me ...</string>
+    <string name="skill_default_text">Android | iOS | Flutter | Web</string>
 </resources>
